@@ -5,7 +5,10 @@ package.domain = org.test
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
-requirements = python3,kivy==2.3.0,kivymd==1.2.0,pillow==10.3.0
+
+# Оставляем только имена, чтобы компилятор использовал свои внутренние рецепты
+requirements = python3,kivy==2.3.0,kivymd,pillow
+
 orientation = portrait
 osx.python_version = 3
 osx.kivy_version = 1.9.1
@@ -16,6 +19,9 @@ android.minapi = 24
 android.ndk = 25b
 android.archs = arm64-v8a
 android.accept_sdk_license = True
+
+# Подключаем ветку с исправлениями багов зависимостей
+p4a.branch = develop
 
 [buildozer]
 log_level = 2
